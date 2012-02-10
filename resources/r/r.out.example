@@ -1,0 +1,439 @@
+
+R version 2.12.0 (2010-10-15)
+Copyright (C) 2010 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-apple-darwin9.8.0/x86_64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> source(file.path('/Users/Adva/Desktop/repository/esm/dev/workspace/it.unibz.esm/resources/r/main.R'))
+> main('/Users/Adva/Desktop/repository/esm/dev/workspace/it.unibz.esm/resources/csv/','1_Mandriva.csv')
+[1] "ESM_QUARTILE_E 1_Mandriva.csv"
+   0%   25%   50%   75%  100% 
+ -4.0  15.0  29.5  64.5 106.0 
+[1] "ESM_QUARTILE_L 1_Mandriva.csv"
+   0%   25%   50%   75%  100% 
+-1.00 11.75 19.00 31.00 42.00 
+[1] "HTMLOUT 1_Mandriva.csv p.value= 2.41928987996375e-11"
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_REGRESSION_E 1_Mandriva.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "e"] ~ len)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-15.773  -5.233   1.049   5.071  12.827 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -12.772819   0.872010  -14.65   <2e-16 ***
+len           0.396364   0.005538   71.58   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 7.171 on 270 degrees of freedom
+Multiple R-squared: 0.9499,	Adjusted R-squared: 0.9498 
+F-statistic:  5123 on 1 and 270 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_REGRESSION_L 1_Mandriva.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "l"] ~ len)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.8460 -1.5713 -0.0543  1.4185  7.5894 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.332537   0.301439   1.103    0.271    
+len         0.149767   0.001914  78.238   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 2.479 on 270 degrees of freedom
+Multiple R-squared: 0.9578,	Adjusted R-squared: 0.9576 
+F-statistic:  6121 on 1 and 270 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_VARIANCE 1_Mandriva.csv"
+                 Df Sum Sq Mean Sq F value  Pr(>F)    
+Stage             1  57462   57462 99.4742 < 2e-16 ***
+Increment         1   3771    3771  6.5281 0.01089 *  
+Stage:Increment   1    908     908  1.5718 0.21049    
+Residuals       540 311935     578                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+
+> main('/Users/Adva/Desktop/repository/esm/dev/workspace/it.unibz.esm/resources/csv/','2_Ant.csv')
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 4)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_QUARTILE_E 2_Ant.csv"
+  0%  25%  50%  75% 100% 
+   0   44   71   92  101 
+[1] "ESM_QUARTILE_L 2_Ant.csv"
+  0%  25%  50%  75% 100% 
+  -3    5   14   24   32 
+[1] "HTMLOUT 2_Ant.csv p.value= 8.90288323315762e-52"
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 4)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 5)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_REGRESSION_E 2_Ant.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "e"] ~ len)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-15.374  -7.687   3.256   6.875  10.411 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 13.490453   1.085311   12.43   <2e-16 ***
+len          0.430194   0.007907   54.41   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 8.328 on 235 degrees of freedom
+Multiple R-squared: 0.9265,	Adjusted R-squared: 0.9261 
+F-statistic:  2960 on 1 and 235 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_REGRESSION_L 2_Ant.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "l"] ~ len)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-5.101 -1.215  0.030  1.263  7.807 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -4.360187   0.258711  -16.85   <2e-16 ***
+len          0.156769   0.001885   83.18   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 1.985 on 235 degrees of freedom
+Multiple R-squared: 0.9671,	Adjusted R-squared: 0.967 
+F-statistic:  6919 on 1 and 235 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_VARIANCE 2_Ant.csv"
+                 Df Sum Sq Mean Sq  F value  Pr(>F)    
+Stage             1 300868  300868 574.2933 < 2e-16 ***
+Increment         1   1893    1893   3.6127 0.05795 .  
+Stage:Increment   1   1663    1663   3.1734 0.07549 .  
+Residuals       470 246229     524                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+> main('/Users/Adva/Desktop/repository/esm/dev/workspace/it.unibz.esm/resources/csv/','3_Apache.csv')
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 4)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 5)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 6)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_QUARTILE_E 3_Apache.csv"
+  0%  25%  50%  75% 100% 
+   0    5   11   17   22 
+[1] "ESM_QUARTILE_L 3_Apache.csv"
+  0%  25%  50%  75% 100% 
+   0    3    4    4    6 
+[1] "HTMLOUT 3_Apache.csv p.value= 7.44175384367301e-22"
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 4)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 5)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 6)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 7)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_REGRESSION_E 3_Apache.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "e"] ~ len)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.75811 -0.50316 -0.06039  0.55511  1.51193 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.442823   0.131833   3.359  0.00106 ** 
+len         0.185744   0.001939  95.783  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 0.7084 on 115 degrees of freedom
+Multiple R-squared: 0.9876,	Adjusted R-squared: 0.9875 
+F-statistic:  9174 on 1 and 115 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_REGRESSION_L 3_Apache.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "l"] ~ len)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.65957 -0.41068 -0.04295  0.34230  2.86763 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 2.642057   0.150016  17.612  < 2e-16 ***
+len         0.017511   0.002207   7.936 1.53e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 0.8061 on 115 degrees of freedom
+Multiple R-squared: 0.3538,	Adjusted R-squared: 0.3482 
+F-statistic: 62.97 on 1 and 115 DF,  p-value: 1.530e-12 
+
+[1] "ESM_VARIANCE 3_Apache.csv"
+                 Df Sum Sq Mean Sq  F value Pr(>F)    
+Stage             1 3492.4  3492.4 168.3616 <2e-16 ***
+Increment         1    6.6     6.6   0.3168 0.5741    
+Stage:Increment   1    0.2     0.2   0.0119 0.9132    
+Residuals       230 4771.0    20.7                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+> main('/Users/Adva/Desktop/repository/esm/dev/workspace/it.unibz.esm/resources/csv/','4_Bugzilla.csv')
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 4)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 5)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 6)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 7)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 8)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_QUARTILE_E 4_Bugzilla.csv"
+  0%  25%  50%  75% 100% 
+   0    5   14   28   38 
+[1] "ESM_QUARTILE_L 4_Bugzilla.csv"
+  0%  25%  50%  75% 100% 
+   0    5    7   17   23 
+[1] "HTMLOUT 4_Bugzilla.csv p.value= 1.83517852329428e-08"
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 4)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 5)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 6)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 7)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 8)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 9)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_REGRESSION_E 4_Bugzilla.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "e"] ~ len)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.0083 -1.1144 -0.1368  0.9948  3.9404 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -3.929656   0.194876  -20.16   <2e-16 ***
+len          0.141328   0.001173  120.48   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 1.646 on 285 degrees of freedom
+Multiple R-squared: 0.9807,	Adjusted R-squared: 0.9807 
+F-statistic: 1.452e+04 on 1 and 285 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_REGRESSION_L 4_Bugzilla.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "l"] ~ len)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.1250 -2.1018  0.4347  1.8434  3.2145 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -1.006676   0.251893  -3.996  8.2e-05 ***
+len          0.078540   0.001516  51.800  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 2.128 on 285 degrees of freedom
+Multiple R-squared: 0.904,	Adjusted R-squared: 0.9036 
+F-statistic:  2683 on 1 and 285 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_VARIANCE 4_Bugzilla.csv"
+                 Df Sum Sq Mean Sq F value    Pr(>F)    
+Stage             1   5372  5372.0 57.4007 1.445e-13 ***
+Increment         1    215   215.5  2.3025    0.1297    
+Stage:Increment   1      2     2.0  0.0214    0.8837    
+Residuals       570  53345    93.6                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+> main('/Users/Adva/Desktop/repository/esm/dev/workspace/it.unibz.esm/resources/csv/','5_Batek.csv')
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 4)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 5)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 6)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 7)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 8)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 9)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 10)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_QUARTILE_E 5_Batek.csv"
+  0%  25%  50%  75% 100% 
+   0   30   44   52   60 
+[1] "ESM_QUARTILE_L 5_Batek.csv"
+  0%  25%  50%  75% 100% 
+   0    1    4    5   11 
+[1] "HTMLOUT 5_Batek.csv p.value= 5.83133309861097e-45"
+The following object(s) are masked from 'frame (position 3)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 4)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 5)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 6)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 7)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 8)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 9)':
+
+    Date, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 10)':
+
+    Date, Increment, OpenBugs, Stage
+The following object(s) are masked from 'frame (position 11)':
+
+    Date, OpenBugs, Stage
+[1] "ESM_REGRESSION_E 5_Batek.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "e"] ~ len)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-13.147  -2.124   1.087   4.647   8.992 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 11.073620   0.928202   11.93   <2e-16 ***
+len          0.337872   0.009818   34.41   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 5.898 on 161 degrees of freedom
+Multiple R-squared: 0.8803,	Adjusted R-squared: 0.8796 
+F-statistic:  1184 on 1 and 161 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_REGRESSION_L 5_Batek.csv"
+
+Call:
+lm(formula = OpenBugs[Stage == "l"] ~ len)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.7746 -0.8430 -0.1700  0.5045  2.8146 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.796410   0.172226  -4.624 7.68e-06 ***
+len          0.056847   0.001822  31.205  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+Residual standard error: 1.094 on 161 degrees of freedom
+Multiple R-squared: 0.8581,	Adjusted R-squared: 0.8572 
+F-statistic: 973.8 on 1 and 161 DF,  p-value: < 2.2e-16 
+
+[1] "ESM_VARIANCE 5_Batek.csv"
+                 Df Sum Sq Mean Sq  F value    Pr(>F)    
+Stage             1  99348   99348 693.4309 < 2.2e-16 ***
+Increment         1   1679    1679  11.7184 0.0006988 ***
+Stage:Increment   1    345     345   2.4089 0.1216265    
+Residuals       322  46133     143                       
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+> 
